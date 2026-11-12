@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -5,80 +6,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RUBA ABSI | متجر العبايات</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #faf8f5;
-  color: #222;
-}
-header {
-  background: #111;
-  color: #d4af70;
-  text-align: center;
-  padding: 30px;
-}
-header h1 { margin: 0; }
-nav {
-  text-align: center;
-  padding: 15px;
-}
-.products {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 15px;
-  padding: 15px;
-}
-.product {
-  background: white;
-  padding: 12px;
-  border-radius: 12px;
-  text-align: center;
-}
-.product img {
-  width: 100%;
-  border-radius: 10px;
-}
-button {
-  background: #111;
-  color: #d4af70;
-  border: 0;
-  padding: 12px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #111;
-  color: white;
-}
+*{box-sizing:border-box}
+body{margin:0;background:#111;color:#fff;font-family:Arial,sans-serif}
+header{text-align:center;padding:28px 15px;background:#090909;border-bottom:1px solid #b99550}
+.logo{color:#d5b36b;font-family:Georgia,serif;font-size:35px;letter-spacing:3px}
+header p{color:#c7aa70;letter-spacing:4px;font-size:11px}
+nav{padding:14px;text-align:center;background:#181818}
+nav a{color:#e2c47e;text-decoration:none;margin:0 12px}
+.hero{text-align:center;padding:55px 20px;background:linear-gradient(135deg,#24211d,#080808)}
+.hero h1{color:#d9b66c;font-size:30px}
+.hero p{color:#ddd;line-height:2}
+.gold{color:#d9b66c}
+.container{max-width:1100px;margin:auto;padding:30px 18px}
+.section-title{text-align:center;color:#d9b66c;margin-bottom:28px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.product{background:#1d1d1d;border:1px solid #51452f;border-radius:12px;overflow:hidden}
+.product img{width:100%;height:360px;object-fit:cover;background:#292929}
+.no-photo{height:360px;display:flex;align-items:center;justify-content:center;color:#bda36d}
+.details{padding:18px}
+.details h3{color:#e4c57d}
+.price{font-size:23px;color:#e4c57d;font-weight:bold}
+label{display:block;margin:14px 0 7px;color:#ddd}
+select{width:100%;padding:12px;background:#101010;color:white;border:1px solid #8d7548;border-radius:6px}
+button,.order{display:block;width:100%;padding:13px;margin-top:18px;background:#c5a35e;color:#111;border:0;border-radius:6px;font-weight:bold;text-align:center;text-decoration:none;cursor:pointer}
+.info{text-align:center;line-height:2;color:#ddd;background:#1b1b1b;padding:30px;border-radius:10px}
+footer{text-align:center;padding:25px;background:#080808;color:#c5a35e;line-height:2}
 </style>
 </head>
 <body>
 
 <header>
-<h1>RUBA ABSI</h1>
-<p>أناقتك تبدأ من هنا</p>
+<div class="logo">RUBA ABSI</div>
+<p>ABAYA COLLECTION</p>
 </header>
 
 <nav>
-<h2>تشكيلة العبايات</h2>
-<p>عبايات شتوية فاخرة – جملة ومفرق</p>
+<a href="#home">الرئيسية</a>
+<a href="#products">العبايات</a>
+<a href="#contact">تواصل معنا</a>
 </nav>
+
+<section class="hero" id="home">
+<h1>أناقتك تبدأ من هنا</h1>
+<p>عبايات شتوية بتصاميم أنيقة ولمسات فاخرة<br>
+بيع جملة ومفرق – توصيل لجميع المحافظات السورية</p>
+</section>
+
+<main class="container" id="products">
+<h2 class="section-title">تشكيلة RUBA ABSI</h2>
 
 <div class="products">
 <div class="product">
-<h3>عباية شتوية</h3>
-<p>السعر: يحدد لاحقاً</p>
-<button>اطلبي الآن</button>
+<div class="no-photo">صورة العباية</div>
+<div class="details">
+<h3>عباية شتوية فاخرة</h3>
+<p>تصميم أنيق وتفاصيل فرو ناعمة وحزام خصر.</p>
+<div class="price">3,500 ليرة سورية</div>
+
+<label for="color">اختاري اللون</label>
+<select id="color">
+<option>أسود</option>
+<option>كحلي</option>
+<option>فضي</option>
+<option>زيتي</option>
+<option>بني</option>
+<option>شوكو</option>
+</select>
+
+<label for="size">المقاس</label>
+<select id="size">
+<option>كل المقاسات</option>
+</select>
+
+<a class="order" href="#" onclick="orderNow(event)">اطلبي عبر واتساب</a>
 </div>
 </div>
+</div>
+</main>
+
+<section class="container" id="contact">
+<div class="info">
+<h2 class="gold">RUBA ABSI</h2>
+<p>بيع جملة ومفرق</p>
+<p>توصيل لجميع المحافظات السورية</p>
+<p>توصيل مجاني ضمن حلب</p>
+<p>الدفع عند الاستلام</p>
+<p>العنوان: حلب – خان الوزير</p>
+<p>واتساب: 0993 784 232</p>
+<a class="order" href="https://wa.me/963993784232">تواصل معنا واتساب</a>
+<a class="order" href="https://www.instagram.com/ruba.absi/">تابعونا على إنستغرام</a>
+</div>
+</section>
 
 <footer>
-<p>RUBA ABSI</p>
-<p>توصيل لجميع المحافظات السورية</p>
-<p>الدفع عند الاستلام</p>
+RUBA ABSI © 2026<br>
+أناقتك عنوانك
 </footer>
+
+<script>
+function orderNow(event){
+event.preventDefault();
+const color=document.getElementById('color').value;
+const size=document.getElementById('size').value;
+const message=`مرحبا، بدي اطلب عباية شتوية من RUBA ABSI. اللون: ${color}، المقاس: ${size}، السعر: 3500 ليرة سورية.`;
+window.open('https://wa.me/963993784232?text='+encodeURIComponent(message),'_blank');
+}
+</script>
 
 </body>
 </html>
